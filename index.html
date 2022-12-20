@@ -19,13 +19,13 @@
             <button id="show-test">Create Test</button>
             <button id="check-test">Check Test</button>
             <button id="save-text">Save Text</button>
-            <button id="save-list">Save List</button>
+            <button id="load-text">Upload Text</button>
         </div>
         <main class="main-wrapper">
             <div class="editable" id="input-box" contenteditable="true"></div>
             <aside clas="word-list" id="word-list">
                 <h2 id="list-heading">Word list</h2>
-                <ol id="list"></ol>
+                <ol id="list" contenteditable="true"></ol>
             </aside>
         </main>
         
@@ -36,31 +36,7 @@
         </div>
         
        
-        <div class="container-fluid">
-            <table class="table table-sm">
-              <colgroup>
-                <col width="4%" />
-                <col width="10%" />
-                <col width="10%" />
-                <col width="70%" />
-                <col width="2%" />
-                <col width="4%" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Date</th>
-                  <th scope="col">No. of Words</th>
-                  <th scope="col">Words</th>
-                  <th scope="col">showClues</th>
-                  <th scope="col">Delete</th>
-                </tr>
-              </thead>
-              <tbody id="tbody">
-              </tbody>
-            </table>
-          </div>
     </div>
- <script type="module" src="app.js"></script>  
+    <script type="module" src="app.js"></script>  
 </body>
 </html>

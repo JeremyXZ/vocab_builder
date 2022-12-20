@@ -5,14 +5,13 @@ const inputTextEl = document.querySelector('#input-box')
 const wordListEl =  document.querySelector('#list')
 const wordListContainerEl = document.querySelector('#word-list')
 const showTestEl = document.querySelector('#test-box')
-// const clueContainerEl = document.querySelector('#clues')
 const clueListEl = document.querySelector('#clues-list')
 const clueHeadingEl = document.querySelector('#clues-heading')
 
 const showTestBtn = document.querySelector('#show-test')
 const checkTestBtn = document.querySelector('#check-test')
 const saveTextBtn = document.querySelector('#save-text')
-const saveListBtn = document.querySelector('#save-list')
+const loadTextBtn = document.querySelector('#load-text')
 
 
 //two variables to store selectd words/phrases and the pasted-in article
@@ -98,12 +97,6 @@ function checkTest() {
 }
 
 
-//save word list and copied text to local storage
-// const dataToSave = {list: selectedTextArr, text: pastedData}
-// function saveData(name, data) {
-//   window.localStorage.setItem(name, JSON.stringify(data))
-// }
-
 function download(file, text) {
              
   //creating an invisible element
@@ -126,10 +119,10 @@ function download(file, text) {
 
 function saveText() {
   inputTextEl.setAttribute('contenteditable', false)
-  const text = document.querySelector('#list').innerHTML + document.querySelector('#test-box').innerHTML 
+  const text = document.querySelector('#list').innerHTML + "<br/>" + "<br/>"+ document.querySelector('#input-box').innerHTML 
   
   
-  var filename = "choose file name";
+  var filename = "input file name";
   console.log('from input box', text)
   download(filename, text);
             
@@ -146,6 +139,13 @@ function saveList() {
 }
 
 
+// function upload(filePath) {
+//    fetch(filePATH)
+//   .then(response=> response.text())
+//   .then(text=> inputTextEl.innerHTML = text);
+ 
+// }
+
 
 
 inputTextEl.addEventListener('click', getText);
@@ -153,7 +153,7 @@ inputTextEl.addEventListener('paste', handlePaste);
 showTestBtn.addEventListener('click', showTest)
 checkTestBtn.addEventListener('click', checkTest)
 saveTextBtn.addEventListener('click', saveText)
-saveListBtn.addEventListener('click', saveList)
+saveListBtn.addEventListener('click', upload)
 
 
 
