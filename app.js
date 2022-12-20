@@ -25,10 +25,12 @@ function handlePaste(e) {
   const clipboardData = e.clipboardData || window.clipboardData;
   pastedData = clipboardData.getData('text/plain');
   showTestEl.innerHTML = pastedData;
+  inputTextEl.setAttribute('contenteditable', false)
+  inputTextEl.style.fontSize = 30px;
 }
 
 
-//to grap selected words/phrases and show them in the word list
+//to grab selected words/phrases and show them in the word list
 function getText() {
     const selectedText = [];
     const target = window.getSelection().toString();
@@ -46,7 +48,7 @@ function showText(text) {
    }
     
 }
-// transform words on pastedData into blanks
+// transform words on pastedData into blanks (e.g. change color and turn words into parenthesis)
 function createTest() {
   let list =  [...selectedTextArr];
     new HR('#test-box', {
