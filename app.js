@@ -11,6 +11,7 @@ const clueHeadingEl = document.querySelector('#clues-heading')
 const showTestBtn = document.querySelector('#show-test')
 const checkTestBtn = document.querySelector('#check-test')
 const saveTextBtn = document.querySelector('#save-text')
+const saveListBtn = document.querySelector('#save-word-list')
 const loadTextBtn = document.querySelector('#load-text')
 
 
@@ -25,8 +26,7 @@ function handlePaste(e) {
   const clipboardData = e.clipboardData || window.clipboardData;
   pastedData = clipboardData.getData('text/plain');
   showTestEl.innerHTML = pastedData;
-  inputTextEl.setAttribute('contenteditable', false)
-  inputTextEl.style.fontSize = 30px;
+  inputTextEl.style.fontSize = "30px";
 }
 
 
@@ -99,12 +99,13 @@ function checkTest() {
 }
 
 
-function download(file, text) {
+//change type to indicate if html, text, csv file is required
+function download(file, text, type) {
              
   //creating an invisible element
   var element = document.createElement('a');
   element.setAttribute('href',
-  'data:text/html;charset=utf-8, '
+  `data:text/${type};charset=utf-8, `
   + encodeURIComponent(text));
   element.setAttribute('download', file);
 
@@ -126,36 +127,41 @@ function saveText() {
   
   var filename = "input file name";
   console.log('from input box', text)
-  download(filename, text);
+  download(filename, text, "html");
             
 }
-
 
 function saveList() {
-  // inputTextEl.setAttribute('contenteditable', false)
-  var text = document.querySelector('#list').innerHTML;
+  const wordList = []
+  const wordArr = document.getElementById("list").getElementsByTagName("li");
+for (let i=0;i<wordArr.length;i++) {
+    wordList.push(wordArr[i].textContent + '\n')
+}
+const newArr = wordList.reduce((acc, val) => acc + val, "")
+ console.log(newArr)
+
   var filename = "choose file name";
   
-  download(filename, text);
-            
+  download(filename, newArr, "plain");
 }
 
-
-// function upload(filePath) {
-//    fetch(filePATH)
-//   .then(response=> response.text())
-//   .then(text=> inputTextEl.innerHTML = text);
- 
+// function saveList() {
+//   // inputTextEl.setAttribute('contenteditable', false)
+//   const text = document.querySelector('#list').textContent;
+//   const filename = "choose file name";
+  
+//   download(filename, text, "plain");
+            
 // }
-
-
 
 inputTextEl.addEventListener('click', getText);
 inputTextEl.addEventListener('paste', handlePaste);
 showTestBtn.addEventListener('click', showTest)
 checkTestBtn.addEventListener('click', checkTest)
 saveTextBtn.addEventListener('click', saveText)
-saveListBtn.addEventListener('click', upload)
+saveListBtn.addEventListener('click', saveList)
+
+
 
 
 
