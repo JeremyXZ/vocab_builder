@@ -1,9 +1,9 @@
-# Demo site: https://jeremyxz.github.io/vocab_builder/
+## Demo site: https://jeremyxz.github.io/vocab_builder/
 
-# Purpose and functionalities of Vocab-builder
+## Purpose and functionalities of Vocab-builder (not suitable for mobile site)
 
 Vocab-builder aims to provide a tool for you,  an English language learner to build your English vocabulary in CONTEXT. 
-A few clicks away, the tool will create a fill-in-the-blank quiz with clues provided, a list of new words you selected 
+In a few clicks, you will create a fill-in-the-blank quiz with clues provided, a list of new words you selected 
 and the orginal article, as well as a flash card that can test  your familiarity with those new words.
 
 Whenever you find an interesting article online, you can copy and paste it into the input box. Anywhere you
