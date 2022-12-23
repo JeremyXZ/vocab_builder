@@ -1,6 +1,18 @@
 var start; // used to initialize the app
+const loadListBtn = document.querySelector("#load-list")
 
-document.querySelector("#load-list").addEventListener("click", function() {
+// function loadList() {
+
+//   const reader = new FileReader();
+//   reader.addEventListener('load', function() {
+//     document.querySelector('#questions-input-area').textContent = this.result;
+//   });
+//   reader.readAsText(document.querySelector('input').files[0]);
+
+// }
+
+
+function loadList() {
 
   const reader = new FileReader();
   reader.addEventListener('load', function() {
@@ -8,7 +20,9 @@ document.querySelector("#load-list").addEventListener("click", function() {
   });
   reader.readAsText(document.querySelector('input').files[0]);
 
-});
+}
+
+loadListBtn.addEventListener("click", loadList);
 
 
 
