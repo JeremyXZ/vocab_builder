@@ -19,8 +19,8 @@ To save both the original article and the generated word list in html format to 
 button and type the file name.
 
 To load the original article and the word list back to the input box: click "Load Text" button and select the proper file
-from  computer. This will allow you to re-take the quiz (i.e. highlight words in the word list, delete the word list and
-click "Create Test" button. 
+from  computer. This will allow you to re-take the quiz (i.e. highlight words in the artcile as per the word list, delete 
+the word list and click "Create Test" button). 
 
 To save the word list in text format: click "Save Word List" button. This word list can be loaded into the Flash card.
 
@@ -34,15 +34,15 @@ To load questions and check if the word list is properly loaded, click the "LOAD
 
 To start the flash card exercise, click "LOAD QUESTIONS" bar again.
 
-
 Instruction for the Flash card exercise:
 
-1) Input your vocabulary by uploading or typing in your colon-separated word definitin pairs in the dark-blue area. Each pair 
-should be palced on a separate line. 
+1) Two ways to input your vocabulary: a)upload a word list b) type your colon-separated word definitin pairs in the dark-blue area. Each pair should be palced on a separate line. 
 
-2) To reveal an definition,  click on the light-blue question area. Each word in the word list will be shown randomly twice. 
+2) To reveal an definition, click on the light-blue question area. Each word in the word list will be shown randomly twice. 
 
-3) In the stats section at the bottome right corner of the card, there are three digits, respectively indicating the number
+3) Next word will appear when clicking "✅ " or "❌ ".  The former confirms you've known the word, and the latter means the opposite. 
+
+4) In the stats section at the bottome right corner of the card, there are three digits, respectively indicating the number
  of "new words", "known words" and  "familiar words".  Clicking "✅ " on a new word for the first time will turn it into a 
  "known word", for the second time into a "familiar word". Clicking "❌ " will do the opposite. 
  For example: 10-3-8 indicates: 10 new words, 3 known words, 8 familiar words. 
