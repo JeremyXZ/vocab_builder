@@ -13,9 +13,9 @@
 
   <body>
     <div class="load-list">
-      <button id="home"><a href="/index.html">Home</a></button>
-      <h1>Upload Your Word List Here</h1>      
-      <button id="load-list">Load Word List</button>
+      <button id="home" class="heading"><a href="/index.html">Home</a></button>
+      <!-- <h1>Upload Your Word List Here</h1>       -->
+      <button id="load-list" class="heading">Load Word List</button>
       <input id="loading" type="file"/>
       
     </div>
@@ -23,7 +23,7 @@
 
     <div class="flashcard">
       <div class="upload">
-        <label class="upload-questions-label">Upload Questions</label>
+        <label class="upload-questions-label">Upload Questions/Show Card</label>
         <textarea
           id="questions-input-area"
           placeholder="Copy/ paste your comma-separated questions here."
@@ -38,13 +38,16 @@
       </div>
       <div class="answer">
         <p>
-          Input your vocabulary by uploading or typing in your colon-separated word: definitin pairs. Each pair should be on a separate line. 
+          Input your vocabulary by uploading or typing in your colon-separated word: definitin pairs 
+          in dark-blue area. Each pair should be palced on a separate line. 
         </p>
         <p>
-          To reveal an answer click on the light-blue question area. if you're right about a word, clicking "✅ " first time will 
-          score 1 in "understand" stage (2nd column). If you get the same word right the second time,  you'll score 1 in "mastery" 
-          stage (3rd column). Your goal is to have 0 score for the first two columns, and full score on the third. Click "❌ " will have 
-          the oppose effect -- setting you back to full score in first column. 
+          To reveal an answer click on the light-blue question area. Each word in the word list will be 
+          shown randomly twice. In the stats section, there are three digits, respectively indicating 
+          the number of "new words", "known words2 and "familiar words".  Clicking "✅ " on a new word
+          for the first time will turn it into a "known word", for the second time into a "familiar word".
+          Clicking "❌ " will do the opposite. Example: 10-3-8 indicates: 10 new words, 3 known words, 
+          8 familiar words. 
         </p>
       </div>
 

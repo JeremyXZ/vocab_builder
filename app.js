@@ -154,12 +154,25 @@ const newArr = wordList.reduce((acc, val) => acc + val, "")
             
 // }
 
+
+function loadText() {
+
+  const reader = new FileReader();
+  reader.addEventListener('load', function() {
+    document.querySelector('#input-box').innerHTML = this.result;
+  });
+  reader.readAsText(document.querySelector('input').files[0]);
+
+}
+
+  
 inputTextEl.addEventListener('click', getText);
 inputTextEl.addEventListener('paste', handlePaste);
 showTestBtn.addEventListener('click', showTest)
 checkTestBtn.addEventListener('click', checkTest)
 saveTextBtn.addEventListener('click', saveText)
 saveListBtn.addEventListener('click', saveList)
+loadTextBtn.addEventListener("click", loadText );
 
 
 
