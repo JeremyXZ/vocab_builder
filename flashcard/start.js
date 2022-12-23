@@ -17,6 +17,7 @@ function loadList() {
   const reader = new FileReader();
   reader.addEventListener('load', function() {
     document.querySelector('#questions-input-area').textContent = this.result;
+
   });
   reader.readAsText(document.querySelector('input').files[0]);
 
@@ -24,7 +25,7 @@ function loadList() {
 
 loadListBtn.addEventListener("click", loadList);
 
-
+const myFlashcards = document.querySelector('#questions-input-area').textContent
 
 $(document).ready(function () {
   
