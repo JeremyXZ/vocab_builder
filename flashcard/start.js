@@ -16,12 +16,12 @@ function loadList() {
 
   const reader = new FileReader();
   reader.addEventListener('load', function() {
+    console.log(this.result)
     document.querySelector('#questions-input-area').textContent = this.result;
-
+ 
   });
-  reader.readAsText(document.querySelector('input').files[0]);
-
-}
+   reader.readAsText(document.querySelector('input').files[0]);
+  }
 
 loadListBtn.addEventListener("click", loadList);
 

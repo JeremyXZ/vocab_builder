@@ -5,8 +5,15 @@
   }
 
   function loadFromBrowser(selector, delimiter) {
-    var flashcards = [],
-      userInput = $(selector).val().split('\n');
+    var flashcards = [];
+    const data = $(selector).val()
+    if (data.length > 0 && data.includes(':')) {
+      let userInput = data.split('\n');
+    } else {
+      alert('Please enter valid data');
+    }
+
+   let userInput = $(selector).val().split('\n')
 
     // Get rid of empty questions
     userInput = userInput.filter(function (card) {
@@ -14,7 +21,7 @@
     });
 
     if (userInput.length === 0) {
-      console.log('There are no flashcards to upload.');
+      alert ('There are no flashcards to upload.');
       return;
     }
 

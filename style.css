@@ -1,77 +1,106 @@
 * {
-    margin:0;
-    box-sizing: border-box;
-    padding:0;
-    font-family: Arial, Helvetica, sans-serif;
-    
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.navbar {
+  grid-area: nav;
+}
+.buttons {
+  grid-area: buttons;
+}
+/* #input-box {
+  grid-area: textbox;
+} */
+.word-list {
+  grid-area: word-list;
+}
+#clues {
+  grid-area: testbox;
+}
+.instructions {
+  grid-area: instructions;
+}
 
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5fr 300px;
+  grid-template-areas:
+    'nav nav'
+    'buttons buttons'
+    'textbox word-list'
+    'testbox testbox'
+    'instructions instructions';
+
+  /* 
+  flex-direction: column;
+  align-items: center; */
 }
 
 h1 {
-    margin: 8px auto;
+  margin: 8px auto;
 }
 .navbar {
-    display: flex;
-    flex-direction: row;
-    width:100%;
-    background-color: aqua;
-    padding:5px;
-    
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: aqua;
+  padding: 5px;
 }
-.app-title {
-    margin-right: auto;
-    
-}
-.menu{
-    align-self: center;
-}
-.buttons{
-    width:80%;
-    display: flex;
-    justify-content: center;
-    
-}
-button {
-    color:white;
-    background-color:dodgerblue;
-    border-radius: 5px;
-    padding:10px;
-    margin:10px 8px;
+/* .app-title {
+  margin-right: auto;
+} */
+
+.buttons {
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 
-.main-wrapper{
-    display: flex;
-    justify-content: center;
-    width:80%;
+button {
+  color: white;
+  background-color: dodgerblue;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 8px;
 }
+
+#load-text-file {
+  align-self: center;
+  /* padding: 10px 5px; */
+  display: block;
+}
+
+/* .main-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+} */
 .editable {
-    border:solid black 2px;
-    min-height: 300px;
-    width:700px;
-    margin-bottom: 10px;
-    font-size: 20px;
+  border: solid black 2px;
+  min-height: 300px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding-left: 20px;
 }
 
 #test-box {
-    display: none;
+  display: none;
+  width: 77%;
 }
 
-#clues-heading, #clues-list {
-    display: none;
+#clues-heading,
+#clues-list {
+  display: none;
 }
 
 #word-list {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }

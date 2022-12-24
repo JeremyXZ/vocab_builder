@@ -13,7 +13,7 @@
     <div class="container">
         <header class="navbar">
             <h1 class="app-title">Vocabulary Builder</h1>
-            <!-- <nav class="menu">Menu</nav> -->
+            
         </header>
         <div class="buttons">
             <button id="show-test">Create Test</button>
@@ -27,23 +27,24 @@
                         
             
         </div>
-        <main class="main-wrapper">
-            <div class="editable" 
-              id="input-box" 
-              contenteditable="true"
-            ></div>
-            <aside clas="word-list" id="word-list">
-                <h2 id="list-heading">Word list</h2>
-                <ol id="list" contenteditable="true"></ol>
-            </aside>
-        </main>
+        <div class="editable" 
+            id="input-box" 
+            contenteditable="true"
+        ></div>
+
+        <aside class="word-list" id="word-list">
+            <h2 id="list-heading">Word list</h2>
+            <ol id="list" contenteditable="true"></ol>
+        </aside>
         
-          <div id="clues">
+        <div id="clues">
             <h4 id="clues-heading">Fill in the blanks with the following clues:</h4>
             <ul id="clues-list">word clues</ul>
             <div class = "editable" id="test-box" contenteditable="true"></div>            
         </div>
-        <h2>How to use this vocabulary builder</h2>
+        
+        <div class="instructions">
+         <h2>How to use this vocabulary builder</h2>
          <ol>
           <li>Please paste your text inside the above box, then click and highlight a new word/phase.</li>
           <li> Define the words in the word list: separate the new word and your definition with a colon(:).</li>
@@ -57,6 +58,7 @@
           <li>Click "Flash Card" to go to FlashCard page and upload the word list you've just saved by clicking "Choose file"</li>
           <li>Click "Load Word list" and then Click "LOAD QUESTIONS" bar to start the quiz</li>
          </ol>
+        </div>
        
     </div>
     <script type="module" src="app.js"></script>  

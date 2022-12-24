@@ -49,4 +49,4 @@ Instruction for the Flash card exercise:
 4) In the stats section at the bottome right corner of the card, there are three digits, respectively indicating the number
  of "new words", "known words" and  "familiar words".  Clicking "✅ " on a new word for the first time will turn it into a 
  "known word", for the second time into a "familiar word". Clicking "❌ " will do the opposite. 
- For example: 10-3-8 indicates: 10 new words, 3 known words, 8 familiar words. 
+ For example: 10-3-8 indicates: 10 new words, 3 known words, 8 familiar words. Your goal is to rearch this target:  0-0-10.
