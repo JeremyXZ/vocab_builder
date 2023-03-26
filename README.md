@@ -1,4 +1,4 @@
-## Demo: https://jeremyxz.github.io/vocab_builder/
+
 
 ## Purpose and functionalities of Vocab-builder (not suitable for mobile site)
 
